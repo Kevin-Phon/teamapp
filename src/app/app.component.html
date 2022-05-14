@@ -2,13 +2,13 @@
   <div class="ui card">
     <h1>Team Generator</h1>
     <ul class="list">
-      <li>Kevin</li>
-      <li>Phon</li>
+      <li *ngFor="let member of members">{{member}}</li>
     </ul>
 
     <div class="add-members-container">
       <input type="text" placeholder="Name" #addMemberInput
-      (input)="onInput(addMemberInput.value)">
+      (input)="onInput(addMemberInput.value)"
+      [value]="newMemberName">
       <button (click)="addMember()">Add</button>
     </div>
 
