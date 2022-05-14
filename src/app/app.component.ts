@@ -21,7 +21,8 @@ export class AppComponent {
       return;
     }
 
-    this.members.push(this.newMemberName)
+    this.errorMessage = "";
+    this.members.push(this.newMemberName);
     this.newMemberName = "";
   }
 }
