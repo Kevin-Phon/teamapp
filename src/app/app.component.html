@@ -7,8 +7,9 @@
     </ul>
 
     <div class="add-members-container">
-      <input type="text" placeholder="Name">
-      <button>Add</button>
+      <input type="text" placeholder="Name" #addMemberInput
+      (input)="onInput(addMemberInput.value)">
+      <button (click)="addMember()">Add</button>
     </div>
 
     <div class="input-container">
